@@ -59,7 +59,7 @@ export const Sidebar: React.FC<{ contextText?: string }> = ({ contextText }) => 
           <input
             type="text"
             placeholder="Search articles..."
-            className="w-full pl-4 pr-10 py-2 rounded-lg border border-gray-200 bg-white text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500"
+            className="w-full pl-4 pr-10 py-2 rounded-lg border border-gray-200 bg-gray-100 text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500"
           />
           <button className="absolute right-2 top-2.5 text-gray-400 hover:text-brand-500">
             <Search size={18} />
@@ -130,12 +130,6 @@ export const Sidebar: React.FC<{ contextText?: string }> = ({ contextText }) => 
         <p className="text-xs text-gray-500 mt-3 text-center">
           No spam, unsubscribe anytime.
         </p>
-      </div>
-
-      {/* Ad Placeholder */}
-      <div className="w-full h-64 bg-gray-200 dark:bg-gray-700 rounded-xl flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 border-2 border-dashed border-gray-300 dark:border-gray-600">
-        <span className="font-semibold">Ad Space</span>
-        <span className="text-xs">300x250</span>
       </div>
 
       {/* Trending Posts */}

@@ -59,7 +59,7 @@ export const Sidebar: React.FC<{ contextText?: string }> = ({ contextText }) => 
           <input
             type="text"
             placeholder="Search articles..."
-            className="w-full pl-4 pr-10 py-2 rounded-lg border border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500"
+            className="w-full pl-4 pr-10 py-2 rounded-lg border border-gray-200 bg-white text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500"
           />
           <button className="absolute right-2 top-2.5 text-gray-400 hover:text-brand-500">
             <Search size={18} />
@@ -79,7 +79,7 @@ export const Sidebar: React.FC<{ contextText?: string }> = ({ contextText }) => 
                 value={aiQuestion}
                 onChange={(e) => setAiQuestion(e.target.value)}
                 placeholder="What is...?"
-                className="w-full p-2 text-sm rounded border border-indigo-200 dark:border-indigo-700 dark:bg-gray-800 dark:text-white"
+                className="w-full p-2 text-sm rounded border border-indigo-200 bg-white text-gray-900 dark:border-indigo-700 dark:bg-gray-800 dark:text-white"
             />
             <button 
                 type="submit" 
@@ -116,7 +116,7 @@ export const Sidebar: React.FC<{ contextText?: string }> = ({ contextText }) => 
               placeholder="Your email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent"
               required
             />
             <button

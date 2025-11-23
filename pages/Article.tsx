@@ -2,8 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { MOCK_POSTS } from '../constants';
 import { Sidebar } from '../components/Sidebar';
-import { Clock, Calendar, Share2, Facebook, Twitter, Linkedin, Sparkles, AlertCircle } from 'lucide-react';
+import { Clock, Calendar, Share2, Facebook, Linkedin, Sparkles, AlertCircle } from 'lucide-react';
 import { generateSummary } from '../services/geminiService';
+
+const XLogo = ({ size = 20, className }: { size?: number; className?: string }) => (
+  <svg 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="currentColor" 
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 export const Article: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -107,8 +120,8 @@ export const Article: React.FC = () => {
                 <div className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-brand-100 hover:text-brand-600 transition-colors cursor-pointer text-gray-500">
                     <Facebook size={20} />
                 </div>
-                <div className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-blue-100 hover:text-blue-500 transition-colors cursor-pointer text-gray-500">
-                    <Twitter size={20} />
+                <div className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-black hover:text-white transition-colors cursor-pointer text-gray-500">
+                    <XLogo size={20} />
                 </div>
                 <div className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-blue-100 hover:text-blue-700 transition-colors cursor-pointer text-gray-500">
                     <Linkedin size={20} />
@@ -164,7 +177,7 @@ export const Article: React.FC = () => {
                     <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">About {post.author.name}</h4>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{post.author.bio}</p>
                     <div className="mt-4 flex justify-center sm:justify-start gap-4 text-gray-400">
-                        <Twitter size={18} className="hover:text-brand-500 cursor-pointer" />
+                        <XLogo size={18} className="hover:text-black dark:hover:text-white cursor-pointer" />
                         <Linkedin size={18} className="hover:text-brand-500 cursor-pointer" />
                     </div>
                 </div>

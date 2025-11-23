@@ -1,6 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Linkedin, Cpu, CheckCircle } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Cpu, CheckCircle } from 'lucide-react';
+
+const XLogo = ({ size = 20, className }: { size?: number; className?: string }) => (
+  <svg 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="currentColor" 
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 export const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -32,6 +45,13 @@ export const Footer: React.FC = () => {
     }
   };
 
+  const socialLinks = [
+    { Icon: Facebook, url: "https://www.facebook.com/shreyas.peherkar.5" },
+    { Icon: XLogo, url: "https://x.com/56Shreyas" },
+    { Icon: Instagram, url: "https://www.instagram.com/shreyas_peherkar" },
+    { Icon: Linkedin, url: "https://www.linkedin.com/in/shreyas-peherkar" }
+  ];
+
   return (
     <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 mt-20">
       <div className="container mx-auto px-4">
@@ -48,8 +68,14 @@ export const Footer: React.FC = () => {
               Simplifying technology for everyone. We break down complex topics into easy-to-understand guides for beginners and businesses.
             </p>
             <div className="flex gap-4">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" className="text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+              {socialLinks.map(({ Icon, url }, i) => (
+                <a 
+                  key={i} 
+                  href={url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
+                >
                   <Icon size={20} />
                 </a>
               ))}

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Moon, Sun, Cpu } from 'lucide-react';
-import { CATEGORIES } from '../constants';
 
 export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,27 +37,21 @@ export const Header: React.FC = () => {
             TechEase<span className="text-brand-600">.</span>
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            <Link to="/" className={`text-sm font-medium hover:text-brand-600 dark:hover:text-brand-400 transition-colors ${location.pathname === '/' ? 'text-brand-600 dark:text-brand-400' : 'text-gray-600 dark:text-gray-300'}`}>
-              Home
-            </Link>
-            {CATEGORIES.map(cat => (
-               <Link 
-                 key={cat.id}
-                 to={`/category/${cat.slug}`} 
-                 className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
-               >
-                 {cat.name}
-               </Link>
-            ))}
-             <Link to="/about" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
-              About
-            </Link>
-          </nav>
+          {/* Actions & Nav */}
+          <div className="flex items-center gap-4 md:gap-6">
+            {/* Desktop Nav Links - Moved here */}
+            <nav className="hidden md:flex items-center gap-6">
+                <Link to="/" className={`text-sm font-medium hover:text-brand-600 dark:hover:text-brand-400 transition-colors ${location.pathname === '/' ? 'text-brand-600 dark:text-brand-400' : 'text-gray-600 dark:text-gray-300'}`}>
+                Home
+                </Link>
+                <Link to="/about" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+                About
+                </Link>
+            </nav>
 
-          {/* Actions */}
-          <div className="flex items-center gap-4">
+            {/* Separator for desktop */}
+            <div className="hidden md:block h-6 w-px bg-gray-200 dark:bg-gray-700"></div>
+
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 transition-colors"
@@ -90,16 +83,6 @@ export const Header: React.FC = () => {
               <Link to="/" className="px-2 py-1 font-medium text-gray-700 dark:text-gray-200 hover:text-brand-600" onClick={closeMenu}>
                 Home
               </Link>
-               {CATEGORIES.map(cat => (
-               <Link 
-                 key={cat.id}
-                 to={`/category/${cat.slug}`} 
-                 className="px-2 py-1 font-medium text-gray-700 dark:text-gray-200 hover:text-brand-600"
-                 onClick={closeMenu}
-               >
-                 {cat.name}
-               </Link>
-            ))}
               <Link to="/about" className="px-2 py-1 font-medium text-gray-700 dark:text-gray-200 hover:text-brand-600" onClick={closeMenu}>
                 About
               </Link>

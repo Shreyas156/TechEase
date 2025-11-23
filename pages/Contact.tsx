@@ -69,8 +69,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white mb-1">Email Us</h3>
-                  <p className="text-gray-500 text-sm">hello@techeasehub.com</p>
-                  <p className="text-gray-500 text-sm">support@techeasehub.com</p>
+                  <p className="text-gray-500 text-sm">shreyaspeherkar04@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 mb-6">
@@ -79,8 +78,8 @@ export const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white mb-1">Call Us</h3>
-                  <p className="text-gray-500 text-sm">+1 (555) 123-4567</p>
-                  <p className="text-gray-500 text-sm">Mon-Fri, 9am-5pm EST</p>
+                  <p className="text-gray-500 text-sm">7841820609</p>
+                  <p className="text-gray-500 text-sm">Mon-Fri, 9am-5pm</p>
                 </div>
               </div>
                <div className="flex items-start gap-4">
@@ -89,8 +88,8 @@ export const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white mb-1">Office</h3>
-                  <p className="text-gray-500 text-sm">123 Innovation Drive</p>
-                  <p className="text-gray-500 text-sm">Tech City, TC 90210</p>
+                  <p className="text-gray-500 text-sm">Near old Z.P School Ganori</p>
+                  <p className="text-gray-500 text-sm">Phulambri Chhatrapati Sambhajinagar</p>
                 </div>
               </div>
             </div>
@@ -120,7 +119,7 @@ export const Contact: React.FC = () => {
                                 required
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all"
+                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-900 text-white dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder-gray-400"
                                 placeholder="John Doe"
                             />
                         </div>
@@ -133,7 +132,7 @@ export const Contact: React.FC = () => {
                                 required
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all"
+                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-900 text-white dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder-gray-400"
                                 placeholder="john@example.com"
                             />
                         </div>
@@ -147,7 +146,7 @@ export const Contact: React.FC = () => {
                                 name="interest"
                                 value={formData.interest}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all"
+                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-900 text-white dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all"
                              >
                                  <option value="General">General Inquiry</option>
                                  <option value="Advertising">Advertising / Sponsorship</option>
@@ -164,7 +163,7 @@ export const Contact: React.FC = () => {
                                 required
                                 value={formData.subject}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all"
+                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-900 text-white dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder-gray-400"
                                 placeholder="How can we help?"
                             />
                         </div>
@@ -179,7 +178,7 @@ export const Contact: React.FC = () => {
                             rows={5}
                             value={formData.message}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all resize-none"
+                            className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-900 text-white dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all resize-none placeholder-gray-400"
                             placeholder="Write your message here..."
                         ></textarea>
                     </div>
